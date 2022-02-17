@@ -22,41 +22,6 @@ bool humanDebugFLAG = false;
 bool jsonFlag = true; 
 
 
-class TimeCheck{
-	unsigned long timeNow, timePrevious, timeTrigger;
-
-	public:
-	TimeCheck(unsigned long _timeTrigger){
-		timePrevious = millis();
-		timeNow = millis();
-		timeTrigger = _timeTrigger;
-	}
-	
-	void set_trigger(unsigned long _timeTrigger){
-		timeTrigger = _timeTrigger;
-	} 
-
-	bool check_trigger(){
-		bool triggered = false;
-		timeNow = millis();
-		unsigned long deltaTime = timeNow - timePrevious;
-		if (deltaTime > timeTrigger ){
-			timePrevious = timeNow;
-			triggered = true;
-		}
-		else{ triggered = false; }
-		
-		return triggered;
-	}
-}; // class TimeCheck
-
-// Create a clock to print the current temperature every second
-TimeCheck printTempClock(TEMP_CHK_MS);
-
-
-
-
-
 void check_serial(){
   // Ask user to input the setpoint for the heater.
   //Serial.print("Enter temperature setpoint in degrees Celsius: ");
