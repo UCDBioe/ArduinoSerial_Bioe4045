@@ -1,4 +1,4 @@
-%% README.m for Plot_Serial
+%% README.m for Plot_Serial Needs to be updated for Arduino_Serial
 %
 % Plot_Serial.m and Plot_Serial.fig are used to define the Graphical User
 % Interface (GUI, or UI) for the incubator.
