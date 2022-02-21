@@ -1,18 +1,14 @@
 
-
-ArduinoSerialBioe4045
+1-Way plotting and 2-Way Communications between Arduino and Matlab
 ---------------------------
 
 Required Libraries
 -------------------
 * arduinojson
 
-TODO
------
-* update readme in Matlab directory
-
-Bioe3090_Incubator
+ArduinoSerialBioe4045.ino and Arduino_Serial.m
 ------------------
+A program that allows for 2-way communication between an arduino and matlab.
 
 * **void check_serial()** - Function that checks the serial port to see if data is available. If data is available, the function reads the data until a newline character is reached. The data is validated to be a correctly formatted JSON string. The JSON string is decoded and the decoded string is stored into global variables for the PID values and heater setpoint.
 
@@ -21,3 +17,11 @@ Bioe3090_Incubator
 * **void startup()** - Standard Arduino startup function. Starts serial coms, assigns sensors, set PID mode and sets heater setpoint.
 
 * **void loop()** - Main Arduino program loop. 
+
+
+
+Arduino_UI.mlapp
+------------------
+A progrtam that plots data that is being continuously recieved from an arduino
+
+* Associated arduino program (Arduino_to_MATLAB.ino)
